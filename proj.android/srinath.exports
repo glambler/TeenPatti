@@ -1,0 +1,7 @@
+#!/bin/sh
+export COCOS2DX_ROOT="/Users/srinath/Documents/cocos2d-x"
+export SDK_ROOT="/Users/srinath/Documents/android-sdk-macosx/"
+export NDK_ROOT="/Users/srinath/Documents/android-ndk-r9b/"
+export ANDROID_NDK_ROOT="/Users/srinath/Documents/android-ndk-r9b/"
+export ANDROID_SDK_ROOT="/Users/srinath/Documents/android-sdk-macosx/"
+export NDK_MODULE_PATH=$COCOS2DX_ROOT/cocos2dx/platform/third_party/android/prebuilt

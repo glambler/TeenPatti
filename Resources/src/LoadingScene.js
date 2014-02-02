@@ -57,7 +57,7 @@ var LoadingLayer = cc.Layer.extend({
                 // create a scene. it's an autorelease object
                 var mainscene = new MainSceneScene();
                 cc.Director.getInstance().replaceScene(mainscene);
-                var ws = new WebSocket('ws://localhost:8090')
+                var ws = new WebSocket('ws://192.168.1.2:8090')
                 ws.onopen = function() {
                     cc.log("ws is now open!!");
                 }

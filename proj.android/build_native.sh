@@ -1,3 +1,5 @@
+# export user specific settings first
+source "$(whoami).exports"
 APPNAME="TeenPatti"
 
 # options
