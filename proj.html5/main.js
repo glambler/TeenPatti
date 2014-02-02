@@ -46,10 +46,3 @@ var centerPos;
 //var myApp = new cocos2dApp(GameScene);
 
 var myApp = new cocos2dApp(MyScene);
-
-// create a scene. it's an autorelease object
-//var myScene = new MyScene();
-
-// run
-//director.runWithScene(myScene);
-

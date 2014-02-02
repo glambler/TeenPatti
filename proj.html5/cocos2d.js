@@ -15,6 +15,7 @@
         appFiles:[
             'proj.html5/src/resource.js'//,
             , 'proj.html5/src/myApp.js'
+            , 'proj.html5/src/MainScene.js'
             //'./src/GameLayer.js'
             //main.js is auto-included by preloader.
         ]

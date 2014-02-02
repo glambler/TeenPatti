@@ -66,7 +66,7 @@ var MyLayer = cc.Layer.extend({
         // 3. add your codes below...
         // add a label shows "Hello World"
         // create and initialize a label
-        this.helloLabel = cc.LabelTTF.create("Hello World", "Arial", 38);
+        this.helloLabel = cc.LabelTTF.create("Hello World123", "Arial", 38);
         // position the label on the center of the screen
         this.helloLabel.setPosition(cc.p(size.width / 2, size.height - 40));
         // add the label as a child to this layer
@@ -78,6 +78,10 @@ var MyLayer = cc.Layer.extend({
         this.sprite.setPosition(cc.p(size.width / 2, size.height / 2));
 
         this.addChild(this.sprite, 0);
+
+         //var reader = new cc.BuilderReader(cc.NodeLoaderLibrary.sharedCCNodeLoaderLibrary());
+         var myNode = cc.BuilderReader.load("res/MainScene");
+         this.addChild(myNode);
 
         return true;
     }
