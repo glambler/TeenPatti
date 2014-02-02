@@ -15,3 +15,18 @@ MainScene.prototype.onDidLoadFromCCB = function()
 {   
     cc.log("File was loaded");
 };
+
+var MainSceneScene = cc.Scene.extend({
+    ctor:function() {
+        this._super();
+        cc.associateWithNative( this, cc.Scene );
+    },
+
+    onEnter:function () {
+        this._super();
+        var layer = cc.BuilderReader.load("res/MainScene");
+        //var layer = new MainScene();
+        this.addChild(layer);
+        layer.init();
+    }
+});

@@ -42,7 +42,6 @@ var cocos2dApp = cc.Application.extend({
 var director;
 var winSize;
 var centerPos;
-//preloader has loaded GameLayer js, so go ahead, use it!
-//var myApp = new cocos2dApp(GameScene);
 
-var myApp = new cocos2dApp(MyScene);
+//preloader has loaded loadingscene js, so go ahead, use it!
+var teenpatti = new cocos2dApp(LoadingScene);

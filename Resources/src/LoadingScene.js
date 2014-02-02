@@ -24,7 +24,7 @@
  THE SOFTWARE.
  ****************************************************************************/
 
-var MyLayer = cc.Layer.extend({
+var LoadingLayer = cc.Layer.extend({
     isMouseDown:false,
     helloImg:null,
     helloLabel:null,
@@ -54,6 +54,11 @@ var MyLayer = cc.Layer.extend({
             "res/CloseSelected.png",
             function () {
                 cc.log("close button was clicked.");
+                // create a scene. it's an autorelease object
+                var mainscene = new MainSceneScene();
+                // run
+                cc.Director.getInstance().replaceScene(mainscene);
+                //this.addChild(myNode);
             },this);
         closeItem.setAnchorPoint(cc.p(0.5, 0.5));
 
@@ -66,7 +71,7 @@ var MyLayer = cc.Layer.extend({
         // 3. add your codes below...
         // add a label shows "Hello World"
         // create and initialize a label
-        this.helloLabel = cc.LabelTTF.create("Hello World123", "Arial", 38);
+        this.helloLabel = cc.LabelTTF.create("Hello RADS!", "Arial", 38);
         // position the label on the center of the screen
         this.helloLabel.setPosition(cc.p(size.width / 2, size.height - 40));
         // add the label as a child to this layer
@@ -79,16 +84,12 @@ var MyLayer = cc.Layer.extend({
 
         this.addChild(this.sprite, 0);
 
-         //var reader = new cc.BuilderReader(cc.NodeLoaderLibrary.sharedCCNodeLoaderLibrary());
-         var myNode = cc.BuilderReader.load("res/MainScene");
-         this.addChild(myNode);
-
         return true;
     }
 
 });
 
-var MyScene = cc.Scene.extend({
+var LoadingScene = cc.Scene.extend({
     ctor:function() {
         this._super();
         cc.associateWithNative( this, cc.Scene );
@@ -96,7 +97,7 @@ var MyScene = cc.Scene.extend({
 
     onEnter:function () {
         this._super();
-        var layer = new MyLayer();
+        var layer = new LoadingLayer();
         this.addChild(layer);
         layer.init();
     }

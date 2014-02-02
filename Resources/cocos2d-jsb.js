@@ -27,12 +27,7 @@
 // Not needed by cocos2d-html5
 
 require("jsb.js");
-
-var appFiles = [
-    'src/resource.js',
-    'src/myApp.js'
-    , 'src/MainScene.js'
-];
+require("src/appFiles.js");
 
 cc.dumpConfig();
 
@@ -47,8 +42,8 @@ director.setDisplayStats(true);
 director.setAnimationInterval(1.0 / 60);
 
 // create a scene. it's an autorelease object
-var myScene = new MyScene();
+var teenpatti = new LoadingScene();
 
 // run
-director.runWithScene(myScene);
+director.runWithScene(teenpatti);
 

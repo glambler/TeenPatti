@@ -1,5 +1,6 @@
 (function () {
     var d = document;
+    //require("appFiles.js");
     var c = {
  
         menuType:'canvas',
@@ -12,13 +13,7 @@
         tag:'gameCanvas', 
  
         engineDir:'cocos2d-html5/cocos2d/',
-        appFiles:[
-            'proj.html5/src/resource.js'//,
-            , 'proj.html5/src/myApp.js'
-            , 'proj.html5/src/MainScene.js'
-            //'./src/GameLayer.js'
-            //main.js is auto-included by preloader.
-        ]
+        appFiles:appFiles
     };
  
     window.addEventListener('DOMContentLoaded', function () {
