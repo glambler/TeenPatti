@@ -1,0 +1,44 @@
+{
+  "name" : "mflxpgame-server-moon-frog",
+  "description" : "Moon Frog Labs Pvt Ltd. Making something cool.",
+  "version" : "0.0.1",
+  "author" : "Srinath Ramanujan <srinath@moonfroglabs.com>",
+  "contributors" : [
+    "@moonfrog"
+  ],
+  "main": "./api.js",
+  "scripts": {
+  
+  },
+  "private": true,
+  "engines" : ["node"],
+  "repository" : { "type":"git", "url":"" },
+
+  "dependencies" : {
+    "connect" : ">=1.6.0",
+    "ejs" : ">=0.4.3",
+    "ejs-locals" : ">=1.0.2",
+    "express" : ">=3.0",
+    "redis" : ">=0.9.1",
+    "express-validator" : ">=0.8.0",
+    "MD5" : ">=1.1.0",
+    "mongoose" : ">=3.6.0",
+    "underscore": ">=1.5.0",
+    "winston": ">=0.7.2",
+    "request": ">=2.27.0",
+    "nopt": ">=2.1.2",
+    "path": ">=0.4.9",
+    "stream" : ">=0.0.1",
+    "newrelic" : ">=1.2.0",
+    "string-hash" : ">=1.1.0",
+    "apnagent": ">=1.0.5",
+    "node-gcm": ">=0.9.8",
+    "geoip-lite": ">=1.1.3"
+  },
+  "devDependencies" : {
+    "mocha": ">=1.13.0",
+    "superagent":">=0.15.4",
+    "assert": ">=0.4.9",
+    "expect.js": ">=0.2.0"
+  }
+}
