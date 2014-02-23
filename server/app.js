@@ -23,3 +23,17 @@ app.use(express.static(path.join(__dirname, 'static')));
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
+
+
+var WebSocketServer = require('ws').Server, wss = new WebSocketServer({port: 8090});
+console.log(" listening on {port: 8090}");
+wss.on('connection', function(ws) {
+	console.log('incoming connection ....');
+	ws.on('message', function(message) {
+		console.log(message);
+		messenger.processMessage(ws,message);
+	});
+	ws.on('close', function() {
+		console.log('connection closing....');
+	});
+});
