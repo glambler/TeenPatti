@@ -57,18 +57,6 @@ var LoadingLayer = cc.Layer.extend({
                 // create a scene. it's an autorelease object
                 var mainscene = new MainSceneScene();
                 cc.Director.getInstance().replaceScene(mainscene);
-                var ws = new WebSocket('ws://192.168.1.2:8090')
-                ws.onopen = function() {
-                    cc.log("ws is now open!!");
-                }
-                ws.onmessage = function (evt) { 
-                    var received_msg = evt.data;
-                    cc.log("Message is received...");
-                };
-                ws.onclose = function() { 
-                    // websocket is closed.
-                    cc.log("Connection is closed..."); 
-                };
             },this);
         closeItem.setAnchorPoint(cc.p(0.5, 0.5));
 
