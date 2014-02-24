@@ -1,14 +1,14 @@
 //
-// MainScene class
+// LobbyScene class
 //
-var MainScene = function(){};
+var LobbyScene = function(){};
 
 // Create callback for button
-MainScene.prototype.onPressButton = function()
+LobbyScene.prototype.onPressButton = function()
 {	
     // Rotate the label when the button is pressed
     this.helloLabel.runAction(cc.RotateBy.create(1,360));
-    cc.log("MainScene button was clicked!!");
+    cc.log("LobbyScene button was clicked!!");
     var ws = new WebSocket('ws://192.168.1.2:1200');
     cc.log(ws);
     ws.onopen = function() {
@@ -28,7 +28,7 @@ MainScene.prototype.onPressButton = function()
     };
 };
 
-MainScene.prototype.onDidLoadFromCCB = function()
+LobbyScene.prototype.onDidLoadFromCCB = function()
 {   
     cc.log("File was loaded");
     cc.log("Trying to connect to... ws://192.168.1.2:1200");
@@ -51,7 +51,7 @@ MainScene.prototype.onDidLoadFromCCB = function()
     };
 };
 
-var MainSceneScene = cc.Scene.extend({
+var LobbySceneScene = cc.Scene.extend({
     ctor:function() {
         this._super();
         cc.associateWithNative( this, cc.Scene );
@@ -59,8 +59,8 @@ var MainSceneScene = cc.Scene.extend({
 
     onEnter:function () {
         this._super();
-        var layer = cc.BuilderReader.load("res/MainScene");
-        //var layer = new MainScene();
+        var layer = cc.BuilderReader.load("res/LobbyScene");
+        //var layer = new LobbyScene();
         this.addChild(layer);
         layer.init();
     }

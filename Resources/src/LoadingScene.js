@@ -55,7 +55,7 @@ var LoadingLayer = cc.Layer.extend({
             function () {
                 cc.log("close button was clicked.");
                 // create a scene. it's an autorelease object
-                var mainscene = new MainSceneScene();
+                var mainscene = new LobbySceneScene();
                 cc.Director.getInstance().replaceScene(mainscene);
             },this);
         closeItem.setAnchorPoint(cc.p(0.5, 0.5));

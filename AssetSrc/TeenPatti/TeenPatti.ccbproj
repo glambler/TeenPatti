@@ -33,7 +33,7 @@
 	<key>publishDirectoryAndroid</key>
 	<string>Published-Android</string>
 	<key>publishDirectoryHTML5</key>
-	<string>Published-HTML5</string>
+	<string>Published</string>
 	<key>publishEnabledAndroid</key>
 	<false/>
 	<key>publishEnabledHTML5</key>
